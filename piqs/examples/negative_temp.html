@@ -1,0 +1,250 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="python" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="python" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Spin ensembles: Negative temperature &mdash; piqs 1.1-dev documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> piqs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../piqs.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developers.html">Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">piqs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Spin ensembles: Negative temperature</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/examples/negative_temp.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="spin-ensembles-negative-temperature">
+<h1>Spin ensembles: Negative temperature<a class="headerlink" href="#spin-ensembles-negative-temperature" title="Permalink to this headline">¶</a></h1>
+<p>We consider a system of two two-level systems (TLSs) <span class="math notranslate nohighlight">\(N_1\)</span> and <span class="math notranslate nohighlight">\(N_2\)</span> with identical frequency <span class="math notranslate nohighlight">\(\omega_0\)</span> with collective pumping and collective emission at identical rates, <span class="math notranslate nohighlight">\(\gamma_\text{CE} = (1+\bar{n})\gamma_0\)</span> and <span class="math notranslate nohighlight">\(\gamma_\text{CP}=\bar{n}\gamma_0\)</span>, respectively, with <span class="math notranslate nohighlight">\(\bar{n}=\frac{1}{e^{\hbar\omega_0/k_\mathrm{B}T}-1}\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[\dot{\rho} = -i\lbrack \omega_{0}\left(J_z^{(1)}+J_z^{(2)}\right),\rho \rbrack
++\frac{\gamma_\text {CE}}{2}\mathcal{L}_{J_{-}^{(1)}+ J_{-}^{(2)}}[\rho]
++\frac{\gamma_\text {CP}}{2}\mathcal{L}_{J_{+}^{(1)}+J_{+}^{(2)}}[\rho]\]</div>
+<p>Hama <em>et al.</em> have shown in Ref. [1] that for <span class="math notranslate nohighlight">\(N_1&lt;N_2\)</span>, if the system is initialized in the state <span class="math notranslate nohighlight">\(|{\psi_0}\rangle=|{\downarrow\cdots\downarrow}\rangle_1\otimes|{\uparrow\cdots\uparrow}\rangle_2\)</span>, the system relaxes to a steady state for which the first subsystem is excited, i.e. <span class="math notranslate nohighlight">\(\langle J_z^{(1)}(\infty)\rangle&gt;0\)</span> and for some parameters  <span class="math notranslate nohighlight">\(\frac{\langle J_z^{(1)}(\infty)\rangle}{(N_1/2)}\rightarrow 0.5\)</span>, also in the limit of zero temperature, <span class="math notranslate nohighlight">\(T\rightarrow 0\)</span>.</p>
+<p>Notice that <span class="math notranslate nohighlight">\(\mathcal{L}_{J_{-}^{(1)}+ J_{-}^{(2)}}[\rho]\neq \mathcal{L}_{J_{-}^{(1)}}[\rho]+\mathcal{L}_{ J_{-}^{(2)}}[\rho]\)</span>, which is a case treated in Ref. [2] two obtain syncronized ensembles of atoms.</p>
+<p>Here we explore what happens to the master equation of Eq. (1) one adds also collective and local terms relative to single ensembles,</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\dot{\rho} =
+-i\lbrack \omega_{0}\left(J_z^{(1)}+J_z^{(2)}\right),\rho \rbrack
++\frac{\gamma_\text{CE}}{2}\mathcal{L}_{J_{-}^{(1)}+ J_{-}^{(2)}}[\rho]
++\frac{\gamma_\text{CP}}{2}\mathcal{L}_{J_{+}^{(1)}+J_{+}^{(2)}}[\rho]
++ \frac{\gamma_\text{CEi}}{2}\mathcal{L}_{J_{-}^{(1)}}[\rho]
++\frac{\gamma_\text{CEi}}{2}\mathcal{L}_{J_{-}^{(2)}}[\rho]\\+\sum_{n}^{N_1}\frac{\gamma_\text{E}}{2}\mathcal{L}_{J_{-,n}^{(1)}}[\rho]+\frac{\gamma_\text{D}}{2}\mathcal{L}_{J_{z,n}^{(1)}}[\rho]+\sum_{n}^{N_2}\frac{\gamma_\text{E}}{2}\mathcal{L}_{J_{-,n}^{(2)}}[\rho]+\frac{\gamma_\text{D}}{2}\mathcal{L}_{J_{z,n}^{(2)}}[\rho]\end{aligned}\end{align} \]</div>
+<p>where <span class="math notranslate nohighlight">\(\gamma_\text {CEi}\)</span> is the rate of superradiant decay for the individual ensembles of TLSs, <span class="math notranslate nohighlight">\(\gamma_\text{E}\)</span> and <span class="math notranslate nohighlight">\(\gamma_\text{D}\)</span> are the rates of local emission and dephasing.</p>
+<p>Firstly, we will show how the collective dynamics of Eq. (1) can be investigated in a simple way using QuTiP's [3] <span class="math notranslate nohighlight">\(\texttt{jmat}\)</span> function, which defines collective spins for maximally symmetric states in a Hilbert space of dimension <span class="math notranslate nohighlight">\(N_i+1\)</span>.</p>
+<p>Secondly, we will exploit the permutational invariance of the local processes in Eq. (2) to investigate the exact dynamics using the Dicke basis, <span class="math notranslate nohighlight">\(\rho = \sum_{j,m,m'}p_{j,m,m'}|j,m\rangle\langle j,m'|\)</span> [4]. We will do so numerically using the PIQS library [5].</p>
+<p>In the following we might use in plots thefollowing equivalent notation <span class="math notranslate nohighlight">\(\gamma_\text {CE}=\gamma_\Downarrow\)</span>,
+<span class="math notranslate nohighlight">\(\gamma_\text {CP}=\gamma_\Uparrow\)</span>, <span class="math notranslate nohighlight">\(\gamma_\text {E}=\gamma_\downarrow\)</span>, <span class="math notranslate nohighlight">\(\gamma_\text {P}=\gamma_\uparrow\)</span>, and
+<span class="math notranslate nohighlight">\(\gamma_\text {D}=\gamma_\phi\)</span>.</p>
+<p>References:</p>
+<table class="docutils footnote" frame="void" id="id1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[1]</td><td></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[2]</td><td></td></tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Nathan Shammah, Shahnawaz Ahmed.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.1-dev',
+            LANGUAGE:'python',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

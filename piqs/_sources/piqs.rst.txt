@@ -1,0 +1,10 @@
+Documentation
+=============
+
+.. automodule:: piqs.dicke
+   :members:
+   :undoc-members:
+
+.. automodule:: piqs.cy.dicke
+   :members:
+   :undoc-members:
